@@ -43,7 +43,13 @@ If you make enough to pay off your debt, you win! If not, you lose, and you'll b
 
 ### Classes
 
-- << You should have a list of each of your classes with a description >>
+- Blackjack - controller for blackjack
+- Bingo - controller for bingo
+- Roulette - controller for roulette
+- Slots - controller for slots
+- Card - card object containing data about the value/suit of the card, etc
+- GameData - contains data regarding money, difficulty, settings, etc
+
 
 ## ATP
 
