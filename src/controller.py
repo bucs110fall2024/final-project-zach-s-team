@@ -1,23 +1,26 @@
 import pygame
-from src.card import Card
-from src.gamedata import GameData
+import pygame_menu
 
 class Controller:
 
     def __init__(self):
-            pass
+            self.state = "MENU"
 
     def mainloop(self):
         while True:
-            # 1. handle events
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    pygame.quit()
-                    exit()
+            if self.state == "MENU":
+                self.menuloop()
+            if self.state == "GAME":
+                self.gameloop()
 
-            # 2. detect collisions and update models
+    def menuloop(self):
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                exit()
 
-            # 3. redraw next frame
-
-            # 4. display next frame
-            pygame.display.flip()
+    def gameloop(self):
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                exit()

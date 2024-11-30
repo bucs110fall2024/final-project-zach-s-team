@@ -1,7 +1,7 @@
 
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
-# Gambling My Tuition
+# Flags Quiz
 ## CS110 Final Project Fall 2024
 
 ## Team Members
@@ -12,10 +12,7 @@ Zach Renzi
 
 ## Project Description
 
-This is a game in which you play as a broke college student who needs to pay off their student loans. 
-Unable to pay them off, you turn to the last resort - the casino. 
-Play minigames such as blackjack, bingo, roulette, and slots, trying to work your way out of your troubling situation. 
-If you make enough to pay off your debt, you win! If not, you lose, and you'll be working minumum wage forever.
+A simple quiz game to test knowledge of flags.
 
 ***    
 
@@ -33,22 +30,15 @@ If you make enough to pay off your debt, you win! If not, you lose, and you'll b
 
 ### Features
 
-1. main menu with minigame selection
-2. random number generators to control minigame events
-3. ability to play minigames exactly how they are played in real life
-4. separate screens for each minigame
-5. multiple difficulty settings with each requiring a different amount to be paid off
-6. voice acting/ai voiceover for certain minigames (ex. bingo numbers being called out)
-7. background music (probably piano jazz?) and casino ambiance
+1. main menu
+2. saved highscores
+3. continent quizzes
+4. world quizzes
+5. flag quizzes
 
 ### Classes
 
-- Blackjack - controller for blackjack
-- Bingo - controller for bingo
-- Roulette - controller for roulette
-- Slots - controller for slots
-- Card - card object containing data about the value/suit of the card, etc
-- GameData - contains data regarding money, difficulty, settings, etc
+- Flag: creates a flag object
 
 
 ## ATP
