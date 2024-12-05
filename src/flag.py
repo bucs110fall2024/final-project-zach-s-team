@@ -1,4 +1,3 @@
-import json
 import pygame
 from src.nametocc import NameToCC
 
@@ -12,7 +11,9 @@ class Flag(pygame.sprite.Sprite):
             - x (int): the flag's x pos
             - y (int): the flag's y pos
         """
-        self.image = pygame.image.load(f"assets/flags/{NameToCC().get(country)}.png")
+        super().__init__()
+        self.imageScaleFactor = 5
+        self.image = pygame.transform.scale(pygame.image.load(f"assets/flags/{NameToCC().get(country)}.png"), (2560 / self.imageScaleFactor, 1792 / self.imageScaleFactor))
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y

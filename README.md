@@ -14,9 +14,6 @@ Zach Renzi
 
 A simple quiz game to test knowledge of flags.
 
-External Libraries Used:
-pygame-menu
-
 ***    
 
 ## GUI Design
