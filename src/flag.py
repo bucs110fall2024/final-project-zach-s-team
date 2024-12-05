@@ -1,4 +1,8 @@
-class Flag:
+import json
+import pygame
+from src.nametocc import NameToCC
+
+class Flag(pygame.sprite.Sprite):
 
     def __init__(self, country, x, y):
         """
@@ -8,6 +12,7 @@ class Flag:
             - x (int): the flag's x pos
             - y (int): the flag's y pos
         """
-        self.x = x
-        self.y = y
-        
+        self.image = pygame.image.load(f"assets/flags/{NameToCC().get(country)}.png")
+        self.rect = self.image.get_rect()
+        self.rect.x = x
+        self.rect.y = y

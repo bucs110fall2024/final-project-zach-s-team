@@ -1,12 +1,9 @@
-import pygame
-import controller
+from src.controller import Controller
+
 def main():
-    pygame.init()
-    c = controller.Controller()
-    c.mainloop()
+    controller = Controller()
+    controller.mainloop()
     
-
-
 # https://codefather.tech/blog/if-name-main-python/
 if __name__ == '__main__':
     main()

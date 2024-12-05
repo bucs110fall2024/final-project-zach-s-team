@@ -14,6 +14,9 @@ Zach Renzi
 
 A simple quiz game to test knowledge of flags.
 
+External Libraries Used:
+pygame-menu
+
 ***    
 
 ## GUI Design
@@ -39,6 +42,8 @@ A simple quiz game to test knowledge of flags.
 ### Classes
 
 - Flag: creates a flag object
+- Quiz: manages the quiz
+- NameToCC: converts a country name to a country code
 
 
 ## ATP
