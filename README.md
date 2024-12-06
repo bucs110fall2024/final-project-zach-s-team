@@ -1,7 +1,4 @@
-
-:warning: Everything between << >> needs to be replaced (remove << >> after replacing)
-
-# Gambling My Tuition
+# Flags Quiz
 ## CS110 Final Project Fall 2024
 
 ## Team Members
@@ -12,10 +9,7 @@ Zach Renzi
 
 ## Project Description
 
-This is a game in which you play as a broke college student who needs to pay off their student loans. 
-Unable to pay them off, you turn to the last resort - the casino. 
-Play minigames such as blackjack, bingo, roulette, and slots, trying to work your way out of your troubling situation. 
-If you make enough to pay off your debt, you win! If not, you lose, and you'll be working minumum wage forever.
+A simple quiz game to test knowledge of flags.
 
 ***    
 
@@ -27,34 +21,109 @@ If you make enough to pay off your debt, you win! If not, you lose, and you'll b
 
 ### Final Design
 
-![final gui](assets/finalgui.jpg)
+![final gui](assets/finalgui1.png)
+![final gui](assets/finalgui2.png)
 
 ## Program Design
 
 ### Features
 
-1. main menu with minigame selection
-2. random number generators to control minigame events
-3. ability to play minigames exactly how they are played in real life
-4. separate screens for each minigame
-5. multiple difficulty settings with each requiring a different amount to be paid off
-6. voice acting/ai voiceover for certain minigames (ex. bingo numbers being called out)
-7. background music (probably piano jazz?) and casino ambiance
+1. main menu
+2. saved highscore
+3. flag quiz
 
 ### Classes
 
-- Blackjack - controller for blackjack
-- Bingo - controller for bingo
-- Roulette - controller for roulette
-- Slots - controller for slots
-- Card - card object containing data about the value/suit of the card, etc
-- GameData - contains data regarding money, difficulty, settings, etc
+- Flag: creates a flag object
+- Quiz: manages the quiz
+- NameToCC: converts a country name to a country code
+- Highscore: saves and gets the players highscore
 
 
 ## ATP
 
-| Step                 |Procedure             |Expected Results                   |
-|----------------------|:--------------------:|----------------------------------:|
-|  1                   | Run Counter Program  |GUI window appears with count = 0  |
-|  2                   | click count button   | display changes to count = 1      |
-etc...
+
+test case 1: quiz loop
+
+    test description: ensure the quiz loop starts
+
+    test steps:
+
+        1. start the game
+
+        2. click anywhere on the screen
+
+    expected outcome: the quiz should begin with a random flag on the screen
+
+
+test case 2: typing
+
+    test description: ensure the user can type in the text box
+
+    test steps:
+
+        1. start the game
+
+        2. click anywhere on the screen
+        
+        3. type any letters
+        
+        4. type any symbols
+        
+        5. hit backspace
+    
+    expected outcome: the letters should show up on screen while the symbols should not. backspace should remove the last character typed
+
+
+test case 3: skipping
+
+    test description: ensure the user can skip a question
+
+    test steps:
+
+        1. start the game
+
+        2. click anywhere on the screen
+
+        3. type "skip"
+
+        4. hit enter
+
+    expected outcome: a new flag should show up on screen, the word "skip" should be gone from the screen, and the remaining flags counter at the bottom left of the screen should decrease by 1
+
+
+test case 4: correct flag
+
+    test description: ensure desired behavior when a question is answered correctly
+
+    test steps:
+
+        1. start the game
+
+        2. click anywhere on the screen
+
+        3. type "skip" and hit enter until a flag which is known appears on screen
+
+        4. enter the name of the country
+
+        5. hit enter
+
+    expected outcome: a new flag shows up on screen, the typed country name is gone from the screen, the remaining flags counter decreases by 1, and the counter in the bottom right increases by 1 to indicate the user answered correctly
+
+
+
+test case 5: completed quiz
+
+    test description: ensure the quiz is reset when the quiz ends
+
+    test steps:
+
+        1. start the game
+
+        2. take note of the highscore value displayed
+
+        3. click anywhere on the screen
+
+        4. answer or skip questions until the remaining flag counter reaches 0
+
+    expected outcome: once the counter reaches 0, the initial menu is once again shown on screen. if the score achieved in the quiz was higher than the value shown on initial startup, it is shown as a new highscore. if the score achieved was lower than the previous high score, the value remains unchanged
