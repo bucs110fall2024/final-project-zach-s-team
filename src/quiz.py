@@ -27,4 +27,3 @@ class Quiz:
         country = random.choice(self.unusedCountries)
         self.unusedCountries.remove(country)
         self.currentCountry = country
-        print(self.currentCountry)
