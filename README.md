@@ -41,6 +41,7 @@ A simple quiz game to test knowledge of flags.
 - Flag: creates a flag object
 - Quiz: manages the quiz
 - NameToCC: converts a country name to a country code
+- Highscore: saves and gets the players highscore
 
 
 ## ATP

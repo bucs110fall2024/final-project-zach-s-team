@@ -8,11 +8,15 @@ class Quiz:
         args: none
         return: none
         """
+        self.correctCountries = 0
         self.unusedCountries = []
-        data = json.load(open("etc/countries.json"))
+        file = open("etc/countries.json")
+        data = json.load(file)
+        file.close()
         for i in data:
             self.unusedCountries.append(i["name"])
         self.newCountry()
+
 
     def newCountry(self):
         """
@@ -23,3 +27,4 @@ class Quiz:
         country = random.choice(self.unusedCountries)
         self.unusedCountries.remove(country)
         self.currentCountry = country
+        print(self.currentCountry)
