@@ -8,7 +8,9 @@ class NameToCC:
             - country (str): country name
         return: str
         """
-        data = json.load(open("etc/countries.json"))
+        file = open("etc/countries.json")
+        data = json.load(file)
+        file.close()
         for i in data:
             if i["name"] == country:
                 return i["alpha2"]
